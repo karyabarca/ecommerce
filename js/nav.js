@@ -7,7 +7,7 @@ const createNav = () => {
 
             <div class="nav-items">
                 <div class="search">
-                    <input type="text" class="search-box" placeholder="search brand, product">
+                    <input type="text" class="search-box" id="search-item" placeholder="search brand, product" onkeyup="search()">
                     <button class="search-btn">search</button>
                 </div>
                 <a href="#">
