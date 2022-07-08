@@ -22,6 +22,8 @@
     flex-wrap: wrap;
     height: auto;
     justify-content: center;
+    margin-top: 70px;
+
 }
 
 .product-container-grid>.product-card {

@@ -1,0 +1,62 @@
+[{
+        "id": 1,
+        "titulo": "camisa oversized",
+        "precio": 249,
+        "imagen": "https://storage.googleapis.com/hipnosia/Camisaoversized01.jpg",
+        "categoria": "camisas y blusas",
+        "link":"sections/product01.html"
+    },
+    {
+        "id": 2,
+        "titulo": "chaleco tejido",
+        "precio": 329,
+        "imagen": "https://storage.googleapis.com/hipnosia/Chalecotejido01.jpg",
+        "categoria": "suéters",
+        "link":"sections/product02.html"
+        
+    },
+    {
+        "id": 3,
+        "titulo": "chamarra de baseball",
+        "precio": 899,
+        "imagen": "https://storage.googleapis.com/hipnosia/Chamarradebaseball01_1.jpg",
+        "categoria": "chamarras y abrigos"
+    },
+    {
+        "id": 4,
+        "titulo": "gorro pescador",
+        "precio": 259,
+        "imagen": "https://storage.googleapis.com/hipnosia/Gorropescador01.jpg",
+        "categoria": "accesorios"
+    },
+    {
+        "id": 5,
+        "titulo": "playera de algodón",
+        "precio": 319,
+        "imagen": "https://storage.googleapis.com/hipnosia/Playeradealgodon01.jpg",
+        "categoria": "camisas y blusas"
+
+    },
+    {
+        "id": 6,
+        "titulo": "saco de lino",
+        "precio": 659,
+        "imagen": "https://storage.googleapis.com/hipnosia/Sacodelino01.jpg",
+        "categoria": "chamarras y abrigos"
+
+    },
+    {
+        "id": 7,
+        "titulo": "sueter de lana",
+        "precio": 399,
+        "imagen": "https://storage.googleapis.com/hipnosia/Sueterenlana01.jpg",
+        "categoria": "suéters"
+    },
+    {
+        "id": 8,
+        "titulo": "sueter tejido",
+        "precio": 299,
+        "imagen": "https://storage.googleapis.com/hipnosia/Suetertejido01.jpg",
+        "categoria": "suéters"
+    }
+]

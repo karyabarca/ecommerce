@@ -9,9 +9,9 @@
     width: 500px;
     height: 500px;
     position: relative;
-    background-image: url('../img/product-image.jpg');
     background-size: cover;
 }
+
 
 .product-images{
     position: absolute;
@@ -43,7 +43,7 @@
     width: 50%;
 }
 
-.details .product-brand{
+.details .product-title{
     text-transform: capitalize;
     font-size: 30px;
 }

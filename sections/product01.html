@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Productos - Hipnosia</title>
+    <link rel="shortcut icon" href="../multimedia/favicon.ico">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,700;1,500&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script src="../js/product.js" defer type="module"> </script>
+
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav">
+            <img src="../img/LogoHipnosiaSVG.svg" alt="" class="brand-logo">
+
+            <div class="nav-items">
+                <div class="search">
+                    <input type="text" class="search-box" id="search-item" placeholder="search brand, product"
+                        onkeyup="search()">
+                    <button id="search-button" class="search-btn">search</button>
+                </div>
+                <a href="#">
+                    <img src="https://freesvg.org/img/abstract-user-flat-1.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Linearicons_cart.svg/1024px-Linearicons_cart.svg.png"
+                        alt="">
+                </a>
+            </div>
+        </div>
+
+        <ul class="links-container">
+            <li class="link-item"><a href="/index.html" class="link">Home</a></li>
+            <li class="link-item"><a href="#" class="link">Women</a></li>
+            <li class="link-item"><a href="#" class="link">Men</a></li>
+            <li class="link-item"><a href="#" class="link">Kids</a></li>
+            <li class="link-item"><a href="#" class="link">Accesories</a></li>
+        </ul>
+    </nav>
+
+    <!--     DETALLES DEL PRODUCTO-->
+
+    <section class="product-details">
+        <div style="background-image: url('https://storage.googleapis.com/hipnosia/Camisaoversized02.jpg'); 
+        " class="image-slider">
+            <div class="product-images">
+                <img src="https://storage.googleapis.com/hipnosia/Camisaoversized02.jpg" class="active imagen" alt="">
+                <img src="https://storage.googleapis.com/hipnosia/Camisaoversized01.jpg" alt="">
+                <img src="https://storage.googleapis.com/hipnosia/Camisaoversized03.jpg" alt="">
+                <img src="https://storage.googleapis.com/hipnosia/Camisaoversized04.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="details">
+            <h2 class="product-title">camisa oversized</h2>
+            <p class="product-short-des">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <span class="product-price">$249</span>
+
+
+            <p class="product-sub-heading">select size</p>
+
+            <input type="radio" name="size" value="s" checked hidden id="s-size">
+            <label for="s-size" class="size-radio-btn check">s</label>
+
+            <input type="radio" name="size" value="m" hidden id="m-size">
+            <label for="m-size" class="size-radio-btn">m</label>
+
+            <input type="radio" name="size" value="l" hidden id="l-size">
+            <label for="l-size" class="size-radio-btn">l</label>
+
+            <div>
+                <button class="btn cart-btn">add to cart</button>
+                <button class="btn">add to wishlist</button>
+
+            </div>
+
+        </div>
+    </section>
+
+<!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <img src="../img/LogoHipnosiaSVGBlanco.svg" alt="" class="logo">
+            <div class="footer-ul-container">
+                <ul class="category">
+                    <li class="category-title">men</li>
+                    <li><a href="" class="footer-link">t-shirts</a></li>
+                    <li><a href="" class="footer-link">jeans</a></li>
+                    <li><a href="" class="footer-link">shoes</a></li>
+                    <li><a href="" class="footer-link">shorts</a></li>
+                    <li><a href="" class="footer-link">caps</a></li>
+                    <li><a href="" class="footer-link">sweatshirts</a></li>
+                </ul>
+
+                <ul class="category">
+                    <li class="category-title">women</li>
+                    <li><a href="" class="footer-link">t-shirts</a></li>
+                    <li><a href="" class="footer-link">jeans</a></li>
+                    <li><a href="" class="footer-link">shoes</a></li>
+                    <li><a href="" class="footer-link">shorts</a></li>
+                    <li><a href="" class="footer-link">caps</a></li>
+                    <li><a href="" class="footer-link">sweatshirts</a></li>
+                </ul>
+            </div>
+
+
+
+        </div>
+        <p class="footer-title">About</p>
+        <p class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi natus possimus quasi quisquam
+            accusamus a similique eius. Dolore nesciunt ipsa sint repellat omnis vitae repudiandae rem velit, odio
+            illo tempore.
+            Rem, qui. Voluptates itaque ipsum distinctio quis, incidunt quibusdam minima debitis ducimus! Maiores
+            dolores deleniti ipsa. Id maxime rem a iusto amet odio saepe assumenda deleniti vero, ab hic porro.</p>
+        <p class="info">Support - help@hipnosia.com</p>
+        <p class="info">Telephone - 984 135 60 69</p>
+
+        <div class="footer-social-container">
+            <div>
+                <a href="" class="social-link">terms & services</a>
+                <a href="" class="social-link">privacy page</a>
+            </div>
+
+            <div>
+                <a href="" class="social-link">instagram</a>
+                <a href="" class="social-link">facebook</a>
+            </div>
+        </div>
+
+        <p class="footer-credit">Clothing, best apparels online store</p>
+    </footer>
+</body>
+
+
+
+</html>

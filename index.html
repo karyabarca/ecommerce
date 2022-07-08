@@ -6,11 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Hipnosia - Conoce nuestro blog.">
-    <meta name="keywords"
-        content="diseño, noticias de diseño, agencia creativa, publicidad, agencia digital, agencia de   publicidad, agencia de mercadotecnia">
-
-    <title>Tienda de Hipnosia</title>
+    <title>Productos - Hipnosia</title>
     <link rel="shortcut icon" href="../multimedia/favicon.ico">
 
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -26,295 +22,119 @@
 
 
     <link rel="stylesheet" href="css/estilos.css">
-
+    <script src="js/fetch.js" defer type="module"> </script>
+    <script src="js/search.js" > </script>
+    <script src="js/localStorage.js" defer type="module"> </script>
 </head>
 
 <body>
+<!-- NAVBAR -->
 
-    <nav class="navbar"></nav>
+    <nav class="navbar">
+        <div class="nav">
+            <img src="img/LogoHipnosiaSVG.svg" alt="" class="brand-logo">
 
-    <header class="hero-section">
+            <div class="nav-items">
+                <div class="search">
+                    <input type="text" class="search-box" id="search-item" placeholder="search brand, product"
+                        onkeyup="search()">
+                    <button id="search-button" class="search-btn">search</button>
+                </div>
+                <a href="#">
+                    <img src="https://freesvg.org/img/abstract-user-flat-1.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Linearicons_cart.svg/1024px-Linearicons_cart.svg.png"
+                        alt="">
+                </a>
+            </div>
+        </div>
 
-        <div class="content">
+        <ul class="links-container">
+            <li class="link-item"><a href="/index.html" class="link">Home</a></li>
+            <li class="link-item"><a href="#" class="link">Women</a></li>
+            <li class="link-item"><a href="#" class="link">Men</a></li>
+            <li class="link-item"><a href="#" class="link">Kids</a></li>
+            <li class="link-item"><a href="#" class="link">Accesories</a></li>
+        </ul>
+    </nav>
+
+
+<!--     LISTA DE PRODUCTOS -->    
+<div class="product-container product-container-grid" id="product-list"></div>
+
+    <template id="product-template">
+        <div class="product-card">
+
+            <div class="product-image">
+                <a class="product-link" href="">
+                    <img class="product-thumb">
+                </a>
+                <button class="card-btn"></button>
+            </div>
+
+            <div class="product-info">
+                <h2 class="product-title"></h2>
+                <span class="price"></span>
+            </div>
+
+    </template>
+
+
+<!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
             <img src="img/LogoHipnosiaSVGBlanco.svg" alt="" class="logo">
-            <p class="sub-heading"> best fashion collection of all times </p>
+            <div class="footer-ul-container">
+                <ul class="category">
+                    <li class="category-title">men</li>
+                    <li><a href="" class="footer-link">t-shirts</a></li>
+                    <li><a href="" class="footer-link">jeans</a></li>
+                    <li><a href="" class="footer-link">shoes</a></li>
+                    <li><a href="" class="footer-link">shorts</a></li>
+                    <li><a href="" class="footer-link">caps</a></li>
+                    <li><a href="" class="footer-link">sweatshirts</a></li>
+                </ul>
+
+                <ul class="category">
+                    <li class="category-title">women</li>
+                    <li><a href="" class="footer-link">t-shirts</a></li>
+                    <li><a href="" class="footer-link">jeans</a></li>
+                    <li><a href="" class="footer-link">shoes</a></li>
+                    <li><a href="" class="footer-link">shorts</a></li>
+                    <li><a href="" class="footer-link">caps</a></li>
+                    <li><a href="" class="footer-link">sweatshirts</a></li>
+                </ul>
+            </div>
+
+
 
         </div>
+        <p class="footer-title">About</p>
+        <p class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi natus possimus quasi quisquam
+            accusamus a similique eius. Dolore nesciunt ipsa sint repellat omnis vitae repudiandae rem velit, odio
+            illo tempore.
+            Rem, qui. Voluptates itaque ipsum distinctio quis, incidunt quibusdam minima debitis ducimus! Maiores
+            dolores deleniti ipsa. Id maxime rem a iusto amet odio saepe assumenda deleniti vero, ab hic porro.</p>
+        <p class="info">Support - help@hipnosia.com</p>
+        <p class="info">Telephone - 984 135 60 69</p>
 
+        <div class="footer-social-container">
+            <div>
+                <a href="" class="social-link">terms & services</a>
+                <a href="" class="social-link">privacy page</a>
+            </div>
 
-    </header>
-
-    <!-- cards container -->
-    <section class="product">
-        <h2 class="product-category"> best selling </h2>
-        <button class="pre-btn"><img src="img/arrow.svg" alt=""></button>
-        <button class="nxt-btn"><img src="img/arrow.svg" alt=""></button>
-        <div class="product-container product-container-grid" id="product-list">
-
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">50% off</span>
-                    <img src="img/producto01.jpg" alt="" class="product-thumb">
-                    <button class="card-btn">add to wishlist</button>
-                </div>
-    
-                <div class="product-info">
-                    <h2 class="product-brand">playera</h2>
-                    <p class="product-short-des">Lorem ipsum dolor sit</p>
-                    <span class="price">$90</span>
-                    <span class="actual-price">$200</span>
-                </div>
-            </div>
-    
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">50% off</span>
-                    <img src="img/producto02.jpg" alt="" class="product-thumb">
-                    <button class="card-btn">add to wishlist</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">saco</h2>
-                    <p class="product-short-des">Lorem ipsum dolor sit</p>
-                    <span class="price">$670</span>
-                    <span class="actual-price">$890</span>
-                </div>
-            </div>
-    
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">50% off</span>
-                    <img src="img/producto03.jpg" alt="" class="product-thumb">
-                    <button class="card-btn">add to wishlist</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">sueter</h2>
-                    <p class="product-short-des">Lorem ipsum dolor sit</p>
-                    <span class="price">$380</span>
-                    <span class="actual-price">$460</span>
-                </div>
-            </div>
-    
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">50% off</span>
-                    <img src="img/producto04.jpg" alt="" class="product-thumb">
-                    <button class="card-btn">add to wishlist</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">playera</h2>
-                    <p class="product-short-des">Lorem ipsum dolor sit</p>
-                    <span class="price">$280</span>
-                    <span class="actual-price">$440</span>
-                </div>
-            </div>
-    
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">50% off</span>
-                    <img src="img/producto05.jpg" alt="" class="product-thumb">
-                    <button class="card-btn">add to wishlist</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">sueter</h2>
-                    <p class="product-short-des">Lorem ipsum dolor sit</p>
-                    <span class="price">$300</span>
-                    <span class="actual-price">$500</span>
-                </div>
-            </div>
-    
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">50% off</span>
-                    <img src="img/producto01.jpg" alt="" class="product-thumb">
-                    <button class="card-btn">add to wishlist</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">playera</h2>
-                    <p class="product-short-des">Lorem ipsum dolor sit</p>
-                    <span class="price">$100</span>
-                    <span class="actual-price">$120</span>
-                </div>
-            </div>
-    
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">50% off</span>
-                    <img src="img/producto02.jpg" alt="" class="product-thumb">
-                    <button class="card-btn">add to wishlist</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">saco</h2>
-                    <p class="product-short-des">Lorem ipsum dolor sit</p>
-                    <span class="price">$800</span>
-                    <span class="actual-price">$920</span>
-                </div>
-            </div>
-    
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">50% off</span>
-                    <img src="img/producto03.jpg" alt="" class="product-thumb">
-                    <button class="card-btn">add to wishlist</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">sueter</h2>
-                    <p class="product-short-des">Lorem ipsum dolor sit</p>
-                    <span class="price">$200</span>
-                    <span class="actual-price">$250</span>
-                </div>
+            <div>
+                <a href="" class="social-link">instagram</a>
+                <a href="" class="social-link">facebook</a>
             </div>
         </div>
-    </section>
 
+        <p class="footer-credit">Clothing, best apparels online store</p>
+    </footer>
 
-    <!-- collections -->
-    <section class="collection-container">
-
-        <a href="#" class="collection">
-            <img src="img/women-collection.jpg" alt="">
-            <p class="collection-title">women <br> apparels </p>
-        </a>
-
-        <a href="#" class="collection">
-            <img src="img/men-collection.jpg" alt="">
-            <p class="collection-title">men <br> apparels </p>
-        </a>
-
-        <a href="#" class="collection">
-            <img src="img/accesories-collection.jpg" alt="">
-            <p class="collection-title">accessories <br> apparels </p>
-        </a>
-    </section>
-
-    <!-- cards container -->
-    <section class="product">
-        <h2 class="product-category"> best selling </h2>
-        <button class="pre-btn"><img src="img/arrow.svg" alt=""></button>
-        <button class="nxt-btn"><img src="img/arrow.svg" alt=""></button>
-        <div class="product-container">
-
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">50% off</span>
-                    <img src="img/producto01.jpg" alt="" class="product-thumb">
-                    <button class="card-btn">add to wishlist</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">brand</h2>
-                    <p class="product-short-des">Lorem ipsum dolor sit</p>
-                    <span class="price">$20</span>
-                    <span class="actual-price">$40</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">50% off</span>
-                    <img src="img/producto02.jpg" alt="" class="product-thumb">
-                    <button class="card-btn">add to wishlist</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">brand</h2>
-                    <p class="product-short-des">Lorem ipsum dolor sit</p>
-                    <span class="price">$20</span>
-                    <span class="actual-price">$40</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">50% off</span>
-                    <img src="img/producto03.jpg" alt="" class="product-thumb">
-                    <button class="card-btn">add to wishlist</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">brand</h2>
-                    <p class="product-short-des">Lorem ipsum dolor sit</p>
-                    <span class="price">$20</span>
-                    <span class="actual-price">$40</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">50% off</span>
-                    <img src="img/producto04.jpg" alt="" class="product-thumb">
-                    <button class="card-btn">add to wishlist</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">brand</h2>
-                    <p class="product-short-des">Lorem ipsum dolor sit</p>
-                    <span class="price">$20</span>
-                    <span class="actual-price">$40</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">50% off</span>
-                    <img src="img/producto05.jpg" alt="" class="product-thumb">
-                    <button class="card-btn">add to wishlist</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">brand</h2>
-                    <p class="product-short-des">Lorem ipsum dolor sit</p>
-                    <span class="price">$20</span>
-                    <span class="actual-price">$40</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">50% off</span>
-                    <img src="img/producto01.jpg" alt="" class="product-thumb">
-                    <button class="card-btn">add to wishlist</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">brand</h2>
-                    <p class="product-short-des">Lorem ipsum dolor sit</p>
-                    <span class="price">$20</span>
-                    <span class="actual-price">$40</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">50% off</span>
-                    <img src="img/producto02.jpg" alt="" class="product-thumb">
-                    <button class="card-btn">add to wishlist</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">brand</h2>
-                    <p class="product-short-des">Lorem ipsum dolor sit</p>
-                    <span class="price">$20</span>
-                    <span class="actual-price">$40</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">50% off</span>
-                    <img src="img/producto03.jpg" alt="" class="product-thumb">
-                    <button class="card-btn">add to wishlist</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">brand</h2>
-                    <p class="product-short-des">Lorem ipsum dolor sit</p>
-                    <span class="price">$20</span>
-                    <span class="actual-price">$40</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer ></footer>
-
-    <script src="js/footer.js" type=""> </script>
-    <script src="js/nav.js" type=""> </script>
-    <script src="js/home.js" type=""> </script>
-    <script src="js/objetos.js" type=""> </script>
-
-<!--     <script src="js/localStorage.js" type=""> </script> -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

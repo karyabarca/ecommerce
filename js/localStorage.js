@@ -1,4 +1,22 @@
-let nombre = prompt('¿Cuál es tu nombre?')
-let apellido = prompt('¿Cuál es tu apellido?')
 
-localStorage.setItem('nombre', `El nombre es ${nombre} y el apellido es ${apellido}`)
+document.addEventListener('DOMContentLoaded', () => {
+
+    (async () => {
+
+        const {
+            value: email
+        } = await Swal.fire({
+            title: 'Ingresa tu correo electrónico',
+            input: 'email',
+            inputLabel: 'Correo electrónico:',
+            inputPlaceholder: 'Ingresa tu correo electrónico'
+        })
+
+        if (email) {
+            Swal.fire(`Correo ingresado: ${email}`)
+            localStorage.setItem('correo',`Correo ingresado: ${email}` )
+        }
+
+    })()
+
+})
