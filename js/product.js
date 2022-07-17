@@ -1,8 +1,13 @@
+// Declaración de variables
 const productImages = document.querySelectorAll('.product-images img');
 const productImageSlide = document.querySelector('.image-slider');
-
+const sizeBtns = document.querySelectorAll('.size-radio-btn')
+const cartBtns = document.querySelectorAll('.btn')
+let checkedBtnCart = 0;
+let checkedBtnSize = 0;
 let activeImageSlide = 0;
 
+//Activador de imagen que se muestra cuando das click.
 productImages.forEach((item, i) => {
     item.addEventListener('click', () => {
         productImages[activeImageSlide].classList.remove('active');
@@ -12,30 +17,21 @@ productImages.forEach((item, i) => {
     })
 })
 
-
-// toggle size button
-
-const sizeBtns = document.querySelectorAll('.size-radio-btn')
-let checkedBtn = 0;
-
+// Activador de seleccionador de talla de prenda.
 sizeBtns.forEach((item, i) => {
     item.addEventListener('click', () =>{
-        sizeBtns[checkedBtn].classList.remove('check');
+        sizeBtns[checkedBtnSize].classList.remove('check');
         item.classList.add('check');
-        checkedBtn = i;
+        checkedBtnSize = i;
     })
 })
 
 
-//add to cart btn
-
-const cartBtns = document.querySelectorAll('.btn')
-let checkBtn = 0;
-
+// Activador de seleccionador de los botones "agregar al carrito" y "agregar a wishlist"
 cartBtns.forEach((item, i) => {
     item.addEventListener('click', () => {
-        cartBtns[checkBtn].classList.remove('cart-btn');
+        cartBtns[checkedBtnCart].classList.remove('cart-btn');
         item.classList.add('cart-btn');
-        checkBtn = i;
+        checkedBtnCart = i;
     })
 })

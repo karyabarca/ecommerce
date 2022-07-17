@@ -1,5 +1,8 @@
+// Declaración de variables
 const productCardTemplate = document.querySelector(`#product-template`);
 const productContainer = document.querySelector(`#product-list`);
+
+//Creador de tarjetas de productos disponibles.
 
     fetch("../json/products.json")
     .then((resp) => resp.json())
@@ -9,6 +12,7 @@ const productContainer = document.querySelector(`#product-list`);
             const card = productCardTemplate.content.cloneNode(true).children[0]
             console.log(card)
 
+            //Declaración de variables
             const titulo = card.querySelector(`.product-title`);
             const precio = card.querySelector(`.price`);
             const imagen = card.querySelector(`.product-thumb`);

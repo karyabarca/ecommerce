@@ -1,4 +1,4 @@
-
+//Función que guarda en el local storage el email que se solicita.
 document.addEventListener('DOMContentLoaded', () => {
 
     (async () => {
@@ -16,7 +16,5 @@ document.addEventListener('DOMContentLoaded', () => {
             Swal.fire(`Correo ingresado: ${email}`)
             localStorage.setItem('correo',`Correo ingresado: ${email}` )
         }
-
     })()
-
 })
